@@ -25,4 +25,5 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }} # WICHTIG für den Test-Modus
         run: python aurora_bot.py
